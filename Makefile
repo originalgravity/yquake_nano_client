@@ -136,6 +136,7 @@ CFLAGS := -std=gnu99 -O2 -fno-strict-aliasing \
 		  -Wall -pipe -g -ggdb -MMD -fwrapv
 endif
 
+CFLAGS += -l qrcodegen
 # ----------
 
 # Switch of some annoying warnings.
@@ -249,7 +250,7 @@ LDFLAGS := -L/usr/local/lib -lm
 else ifeq ($(YQ2_OSTYPE),Windows)
 LDFLAGS := -L/usr/lib -lws2_32 -lwinmm -static-libgcc
 else ifeq ($(YQ2_OSTYPE), Darwin)
-LDFLAGS := $(OSX_ARCH) -lm
+LDFLAGS := $(OSX_ARCH) -lm -lqrcodegen
 endif
 
 # Keep symbols hidden.
