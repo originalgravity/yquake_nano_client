@@ -503,7 +503,7 @@ ClientObituary(edict_t *self, edict_t *inflictor /* unused */,
 		switch (mod)
 		{
 			case MOD_SUICIDE:
-				message = "suicides";
+				message = "lost their seed";
 				break;
 			case MOD_FALLING:
 				message = "cratered";
@@ -515,17 +515,17 @@ ClientObituary(edict_t *self, edict_t *inflictor /* unused */,
 				message = "sank like a rock";
 				break;
 			case MOD_SLIME:
-				message = "melted";
+				message = "got liquidated on BitMex";
 				break;
 			case MOD_LAVA:
-				message = "does a back flip into the lava";
+				message = "got liquidated on BitMex";
 				break;
 			case MOD_EXPLOSIVE:
 			case MOD_BARREL:
 				message = "blew up";
 				break;
 			case MOD_EXIT:
-				message = "found a way out";
+				message = "exit scammed";
 				break;
 			case MOD_TARGET_LASER:
 				message = "saw the light";
@@ -568,15 +568,15 @@ ClientObituary(edict_t *self, edict_t *inflictor /* unused */,
 
 					if (IsNeutral(self))
 					{
-						message = "blew itself up";
+						message = "lost it's seed";
 					}
 					else if (IsFemale(self))
 					{
-						message = "blew herself up";
+						message = "lost her seed";
 					}
 					else
 					{
-						message = "blew himself up";
+						message = "lost his seed";
 					}
 
 					break;
@@ -587,15 +587,15 @@ ClientObituary(edict_t *self, edict_t *inflictor /* unused */,
 
 					if (IsNeutral(self))
 					{
-						message = "killed itself";
+						message = "got liquidated";
 					}
 					else if (IsFemale(self))
 					{
-						message = "killed herself";
+						message = "got liquidated";
 					}
 					else
 					{
-						message = "killed himself";
+						message = "got liquidated";
 					}
 
 					break;
@@ -624,7 +624,7 @@ ClientObituary(edict_t *self, edict_t *inflictor /* unused */,
 			switch (mod)
 			{
 				case MOD_BLASTER:
-					message = "was blasted by";
+					message = "was 51% attacked by";
 					break;
 				case MOD_SHOTGUN:
 					message = "was gunned down by";
@@ -661,7 +661,7 @@ ClientObituary(edict_t *self, edict_t *inflictor /* unused */,
 					message2 = "'s hyperblaster";
 					break;
 				case MOD_RAILGUN:
-					message = "was railed by";
+					message = "was rai-blocked by";
 					break;
 				case MOD_BFG_LASER:
 					message = "saw the pretty lights from";
